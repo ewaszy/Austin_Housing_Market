@@ -1,19 +1,21 @@
-CREATE TABLE Austin_Housing_Market (
+CREATE TABLE Final_Project_AHM (
   zpid INT NOT NULL,
   zipcode INT NOT NULL,
-  latitde DATE NOT NULL,
-  longitude DATE NOT NULL,
-  latestPrice INT not NULL,
-  livingAreSQFt Int not null,
+  latitude decimal NOT NULL,
+  longitude decimal NOT NULL,
+  latestPrice decimal not NULL,
+  livingAreSQFt decimal not null,
   latest_saledate DATE not null
 	);
 	
 select AHM.zpid, 
 		AHM.zipcode, 
-		AHM.latitde, 
+		AHM.latitude, 
 		AHM.longitude, 
 		AHM.latestPrice, 
 		AHM.livingAreSQFt, 
 		AHM.latest_saledate
-from Austin_Housing_Market as AHM
+from Final_Project_AHM as AHM
+
+DROP TABLE Final_Project_AHM CASCADE;
 	
