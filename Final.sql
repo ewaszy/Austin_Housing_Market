@@ -16,6 +16,4 @@ select AHM.zpid,
 		AHM.livingAreSQFt, 
 		AHM.latest_saledate
 from Final_Project_AHM as AHM
-
-DROP TABLE Final_Project_AHM CASCADE;
 	
