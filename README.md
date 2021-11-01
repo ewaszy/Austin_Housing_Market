@@ -15,26 +15,15 @@ The data we have selected to use was sourced from Kaggle (https://www.kaggle.com
 
 This dataset is in CSV format and contains 15,171 home listings that were scraped from the web in January 2021 by Eric Pierce. There are 45 features included in the dataset. 
 
-For our analysis, we will be focusing attributes the describe the location, price, and time of sale: 
+For our analysis, we will be focusing attributes the describe the location, price, time of sale, and size: 
 * Id: The Zillow Property ID as a unique identifier 
-* City: The name of the city or town the listing is located in; Austin metropolitan area + surrounding suburbs  
-* Street Address: The physical address of the listing
 * Zipcode:The 5-digit zipcode that the listing in located in
 * Latitude
 * Longitude
-* Latest Price: The most recent available price at time of data acquisition.
-* Number of Price Changes: The number of price changes a home has undergone since being listed.
-* Latest Sale Date: (YYYY-MM-DD).
-* Latest Sales Month: The month the home sold (DD-MM).
-* Latest Sales Year: The year the property sold (2018-2021).
-
-Additionally, we will also consider these features when predicting the price of a home:
-* Home Type: SingleFamily Home, Condo, Townhouse, etc.
-* Lot size
+* Latest Price: The most recent available price at time of data acquisition
+* Latest Sale Date: (YYYY-MM-DD)
 * Living Area Square Feet
-* Number of Bedrooms
-* Number of Bathrooms
-* Property Tax Rate: Tax paid on property that is owned by an individual. The average property tax rate in Texas is 1.80%. Property tax rates are usually higher within city limits. 
+
 
 ## Question we hope to answer with our data: What is the median price of a home for each neighborhood in Austin, TX?
 * We hope to predict the median price of a home based on the neighborhood 6 months into the future based on previously defined attributes.
@@ -51,7 +40,7 @@ Pandas will be used to clean the data and perform an exploratory analysis. Furth
 
 ### Database Storage
 
-SQL is the database we intend to use and we will integrate Flask to display the data.
+SQL is the database we intend to use through Postgress. We will integrate Flask to display the data.
 
 ### Machine Learning
 
