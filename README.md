@@ -32,7 +32,8 @@ Additionally, we will also consider these features when predicting the price of 
 * Home Type: SingleFamily Home, Condo, Townhouse, etc.
 * Lot size
 * Living Area Square Feet
-* Number of Bedrooms and Bathrooms
+* Number of Bedrooms
+* Number of Bathrooms
 * Property Tax Rate: Tax paid on property that is owned by an individual. The average property tax rate in Texas is 1.80%. Property tax rates are usually higher within city limits. 
 
 ## Question we hope to answer with our data: What is the median price of a home for each neighborhood in Austin, TX?
@@ -54,7 +55,7 @@ SQL is the database we intend to use and we will integrate Flask to display the 
 
 ### Machine Learning
 
-SciKitLearn is the ML library we'll be using to create a classifier. Our training and testing setup is 80% training and 20% testing. The testing and training data will contain 16 features based on location, price, time of sale, size, and home type. Our target will be the latestPrice. The goal is to take the 16 features and the target of the training data to accurately retrieve the target, latestPrice. 
+SciKitLearn is the ML library we'll be using to create a classifier. Our training and testing setup is 80% training and 20% testing. The testing and training data will contain 17 features based on location, price, time of sale, size, and home type. Our target will be the latestPrice. The goal is to take the 17 features and the target of the training data to accurately retrieve the target, latestPrice. 
 
 ### Dashboard
 
