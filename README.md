@@ -13,7 +13,7 @@ Austin is turning into one of the most expensive real estate markets in the coun
 
 The data we have selected to use was sourced from Kaggle (https://www.kaggle.com/ericpierce/austinhousingprices). 
 
-This dataset is in CSV format and contains 15,171 home listings that were scraped from the web in January 2021 by Eric Pierce. There are 45 features included in the dataset. 
+This dataset is in CSV format and contains 15,171 home listings that were scraped from the web in January 2021 by Eric Pierce. There are 45 variables included in the dataset. 
 
 For our analysis, we will be focusing attributes the describe the location, price, time of sale, and size: 
 * Id: The Zillow Property ID as a unique identifier 
@@ -44,7 +44,7 @@ SQL is the database we intend to use through Postgress. We will integrate Flask 
 
 ### Machine Learning
 
-SciKitLearn is the ML library we'll be using to create a classifier. Our training and testing setup is 80% training and 20% testing. The testing and training data will contain 17 features based on location, price, time of sale, size, and home type. Our target will be the latestPrice. The goal is to take the 17 features and the target of the training data to accurately retrieve the target, latestPrice. 
+SciKitLearn is the ML library we'll be using to create a classifier. Our training and testing setup is 80% training and 20% testing. The testing and training data will contain 7 features based on location, price, time of sale, and size. The goal is to take the 7 features as the target of the training data to accurately retrieve the target, latestPrice. 
 
 ### Dashboard
 
