@@ -1,3 +1,12 @@
+# Final_Project
+
+## Data Cleaning and Analysis
+
+The dataset we have chosen has over 15 thousand home listings and 45 initial features. While this data is extensive and essential to this project, it needs to be cleaned for duplicate and invalid entries, and scaled down to fit the project better. We will be using the Pandas software to do just that, and for us to see the dataset better. As we analyze the data further we will be using Python in Jupyter Notebook.
+
+## Database
+SQL is the database we intend to use to house the database and we will integrate Flask to display the dataset. We will use SQL to display the tables made in Pandas and Python in an concise way that clearly shows the relationships between the columns. 
+
 # Presentation: 
 
 ## Topic: Changes in the Austin Real Estate Market
@@ -61,4 +70,3 @@ One option that we believe will help raise the accuracy score is to create price
 Another step we would need to continue to do is to see the impact that each feature has on the accuracy score and determine if there is a feature that isn't needed or if we include more features to help push the accuracy score up
 
 Aside from trying to raise the accuracy score by lowering the prediction possibilities and deleting/adding features, we could also try using other machine learning models to determine which is the best at determining prices.
-
