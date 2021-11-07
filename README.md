@@ -9,3 +9,7 @@ One option that we believe will help raise the accuracy score is to create price
 Another step we would need to continue to do is to see the impact that each feature has on the accuracy score and determine if there is a feature that isn't needed or if we include more features to help push the accuracy score up
 
 Aside from trying to raise the accuracy score by lowering the prediction possibilities and deleting/adding features, we could also try using other machine learning models to determine which is the best at determining prices.
+
+
+### Revamped Decision Tree
+To increase accuracy we had it predict whether it would be classified as expensive or inexpensive. We did this by instead of trying to predict prices for the home we would instead  
