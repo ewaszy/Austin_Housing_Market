@@ -12,4 +12,6 @@ Aside from trying to raise the accuracy score by lowering the prediction possibi
 
 
 ### Revamped Decision Tree
-To increase accuracy we had it predict whether it would be classified as expensive or inexpensive. We did this by instead of trying to predict prices for the home we would instead  
+To increase accuracy we had it predict whether it would be classified as expensive or inexpensive. We did this instead of predicting exact pricing in order to receive
+a better accuracy score. What we would do next is instead of creating two huge classes we will break it down into smaller classes that would represent budget jumps to 
+show buyers homes in their price range. 
