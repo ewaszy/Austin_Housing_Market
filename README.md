@@ -30,8 +30,13 @@ For our analysis, we will be focusing attributes the describe the location, pric
 * Latitude
 * Longitude
 * Latest Price: The most recent available price at time of data acquisition
-* Latest Sale Date: (YYYY-MM-DD)
+* Latest Sale Year
 * Living Area Square Feet
+* Number of Bedrooms
+* Number of Bathrooms
+* Year Built
+* Age of House
+
 
 
 ## Question we hope to answer with our data: What is the median price of a home for each neighborhood in Austin, TX?
@@ -49,7 +54,7 @@ Pandas will be used to clean the data and perform an exploratory analysis. Furth
 
 ### Database Storage
 
-SQL is the database we intend to use through Postgress. We will integrate Flask to display the data.
+SQL is the database we intend to use through PostrgreSQL. We will integrate Flask to display the data.
 
 ### Machine Learning
 
