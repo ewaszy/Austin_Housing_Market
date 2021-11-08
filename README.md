@@ -1,3 +1,12 @@
+# Final_Project
+
+## Data Cleaning and Analysis
+
+The dataset we have chosen has over 15 thousand home listings and 45 initial features. While this data is extensive and essential to this project, it needs to be cleaned for duplicate and invalid entries, and scaled down to fit the project better. We will be using the Pandas software to do just that, and for us to see the dataset better. As we analyze the data further we will be using Python in Jupyter Notebook.
+
+## Database
+SQL is the database we intend to use to house the database and we will integrate Flask to display the dataset. We will use SQL to display the tables made in Pandas and Python in an concise way that clearly shows the relationships between the columns. 
+
 # Presentation: 
 
 ## Topic: Changes in the Austin Real Estate Market
@@ -13,18 +22,22 @@ Austin is turning into one of the most expensive real estate markets in the coun
 
 The data we have selected to use was sourced from Kaggle (https://www.kaggle.com/ericpierce/austinhousingprices). 
 
-This dataset is in CSV format and contains 15,171 home listings that were scraped from the web in January 2021 by Eric Pierce. There are 45 features included in the dataset. 
+This dataset is in CSV format and contains 15,171 home listings that were scraped from the web in January 2021 by Eric Pierce. There are 45 variables included in the dataset. 
 
-For our analysis, we will be focusing attributes the describe the location, price, and time of sale: 
-* Id: The Zillow Property ID as a unique identifier   
+For our analysis, we will be focusing attributes the describe the location, price, time of sale, and size: 
+* Id: The Zillow Property ID as a unique identifier 
 * Zipcode:The 5-digit zipcode that the listing in located in
 * Latitude
 * Longitude
-* Latest Price: The most recent available price at time of data acquisition.
-* Latest Sale Date: (YYYY-MM-DD).
-
-Additionally, we will also consider these features when predicting the price of a home:
+* Latest Price: The most recent available price at time of data acquisition
+* Latest Sale Year
 * Living Area Square Feet
+* Number of Bedrooms
+* Number of Bathrooms
+* Year Built
+* Age of House
+
+
 
 ## Question we hope to answer with our data: What is the median price of a home for each neighborhood in Austin, TX?
 * We hope to predict the median price of a home based on the neighborhood 6 months into the future based on previously defined attributes.
@@ -45,8 +58,20 @@ SQL is the database we intend to use through PostrgreSQL. We will integrate Flas
 
 ### Machine Learning
 
-SciKitLearn is the ML library we'll be using to create a classifier. Our training and testing setup is 80% training and 20% testing. The testing and training data will contain 17 features based on location, price, time of sale, size, and home type. Our target will be the latestPrice. The goal is to take the 17 features and the target of the training data to accurately retrieve the target, latestPrice. 
+SciKitLearn is the ML library we'll be using to create a classifier. Our training and testing setup is 80% training and 20% testing. The testing and training data will contain 7 features based on location, price, time of sale, and size. The goal is to take the 7 features as the target of the training data to accurately retrieve the target, latestPrice. 
 
 ### Dashboard
 
 In addition to using a Flask template, we will also integrate D3.js for a fully functioning and interactive dashboard. It will be hosted on Tableau.
+
+# How to improve Machine Learning Model
+
+## What went wrong
+Due to predicting prices the decision tree model had an extremely low accuracy score, and was not able to complete a confusion matrix
+
+## Next steps to solve the problems
+One option that we believe will help raise the accuracy score is to create price ranges from the 'latest_saleprice' column and have the decision tree model predict in which range the house will fall in as opposed to predicting the price itself.
+
+Another step we would need to continue to do is to see the impact that each feature has on the accuracy score and determine if there is a feature that isn't needed or if we include more features to help push the accuracy score up
+
+Aside from trying to raise the accuracy score by lowering the prediction possibilities and deleting/adding features, we could also try using other machine learning models to determine which is the best at determining prices.
