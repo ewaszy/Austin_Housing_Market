@@ -1,12 +1,5 @@
 # Final_Project
 
-## Data Cleaning and Analysis
-
-The dataset we have chosen has over 15 thousand home listings and 45 initial features. While this data is extensive and essential to this project, it needs to be cleaned for duplicate and invalid entries, and scaled down to fit the project better. We will be using the Pandas software to do just that, and for us to see the dataset better. As we analyze the data further we will be using Python in Jupyter Notebook.
-
-## Database
-SQL is the database we intend to use to house the database and we will integrate Flask to display the dataset. We will use SQL to display the tables made in Pandas and Python in an concise way that clearly shows the relationships between the columns. 
-
 # Presentation: 
 
 ## Topic: Changes in the Austin Real Estate Market
@@ -37,10 +30,15 @@ For our analysis, we will be focusing attributes the describe the location, pric
 * Year Built
 * Age of House
 
-
-
 ## Question we hope to answer with our data: What is the median price of a home for each neighborhood in Austin, TX?
 * We hope to predict the median price of a home based on the neighborhood 6 months into the future based on previously defined attributes.
+
+## Description of DataExploration Phase
+
+The dataset we have chosen has over 15 thousand home listings and 45 initial features. While this data is extensive and essential to this project, it needs to be cleaned for duplicate and invalid entries, and scaled down to fit the project better. We will be using the Pandas software to do that, and for us to see the dataset better. As we analyze the data further we will be using Python in Jupyter Notebook.
+
+## Description of Analysis Phase
+
 
 
 
@@ -56,7 +54,7 @@ Pandas will be used to clean the data and perform an exploratory analysis. Furth
 
 SQL is the database we intend to use through PostrgreSQL. We will integrate Flask to display the data.
 
-### Machine Learning
+# Machine Learning
 
 SciKitLearn is the ML library we'll be using to create a classifier. Our training and testing setup is 80% training and 20% testing. The testing and training data will contain 7 features based on location, price, time of sale, and size. The goal is to take the 7 features as the target of the training data to accurately retrieve the target, latestPrice. 
 
@@ -64,14 +62,17 @@ SciKitLearn is the ML library we'll be using to create a classifier. Our trainin
 
 In addition to using a Flask template, we will also integrate D3.js for a fully functioning and interactive dashboard. It will be hosted on Tableau.
 
-# How to improve Machine Learning Model
+## How to improve Machine Learning Model
 
-## What went wrong
+### What went wrong
 Due to predicting prices the decision tree model had an extremely low accuracy score, and was not able to complete a confusion matrix
 
-## Next steps to solve the problems
+### Next steps to solve the problems
 One option that we believe will help raise the accuracy score is to create price ranges from the 'latest_saleprice' column and have the decision tree model predict in which range the house will fall in as opposed to predicting the price itself.
 
 Another step we would need to continue to do is to see the impact that each feature has on the accuracy score and determine if there is a feature that isn't needed or if we include more features to help push the accuracy score up
 
 Aside from trying to raise the accuracy score by lowering the prediction possibilities and deleting/adding features, we could also try using other machine learning models to determine which is the best at determining prices.
+
+# Database
+SQL is the database we intend to use to house the database and we will integrate Flask to display the dataset. We will use SQL to display the tables made in Pandas and Python in an concise way that clearly shows the relationships between the columns. 
