@@ -52,7 +52,7 @@ Pandas will be used to clean the data and perform an exploratory analysis. Furth
 
 ### Database Storage
 
-SQL is the database we intend to use through PostrgreSQL. We will integrate Flask to display the data.
+SQL is the database we intend to use through PostrgreSQL. We will integrate Flask to display the data. We will utilize SQL to display the tables made in Pandas and Python in a concise way that clearly shows the relationships between the columns. 
 
 # Machine Learning
 
@@ -61,6 +61,8 @@ SciKitLearn is the ML library we'll be using to create a classifier. Our trainin
 ### Dashboard
 
 In addition to using a Flask template, we will also integrate D3.js for a fully functioning and interactive dashboard. It will be hosted on Tableau.
+
+
 
 ## How to improve Machine Learning Model
 
@@ -74,5 +76,4 @@ Another step we would need to continue to do is to see the impact that each feat
 
 Aside from trying to raise the accuracy score by lowering the prediction possibilities and deleting/adding features, we could also try using other machine learning models to determine which is the best at determining prices.
 
-# Database
-SQL is the database we intend to use to house the database and we will integrate Flask to display the dataset. We will use SQL to display the tables made in Pandas and Python in an concise way that clearly shows the relationships between the columns. 
+
