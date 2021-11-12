@@ -1,12 +1,5 @@
 # Final_Project
 
-## Data Cleaning and Analysis
-
-The dataset we have chosen has over 15 thousand home listings and 45 initial features. While this data is extensive and essential to this project, it needs to be cleaned for duplicate and invalid entries, and scaled down to fit the project better. We will be using the Pandas software to do just that, and for us to see the dataset better. As we analyze the data further we will be using Python in Jupyter Notebook.
-
-## Database
-SQL is the database we intend to use to house the database and we will integrate Flask to display the dataset. We will use SQL to display the tables made in Pandas and Python in an concise way that clearly shows the relationships between the columns. 
-
 # Presentation: 
 
 ## Topic: Changes in the Austin Real Estate Market
@@ -43,13 +36,16 @@ For our analysis, we will be focusing attributes the describe the location, pric
 
 ## Description of Communication Protocols: Technologies Used
 
-### Data Cleaning and Analysis
 
-Pandas will be used to clean the data and perform an exploratory analysis. Further analysis will be completed using Python in Jupyter Notebook.
+## Data Cleaning and Analysis
 
-### Database Storage
+The dataset we have chosen has over 15 thousand home listings and 45 initial features. While this data is extensive and essential to this project, it needs to be cleaned for duplicate and invalid entries and scaled down to fit the project better. We will be using the Pandas software to do just that, and for us to see the dataset better. As we analyze the data further, we will be using Python in Jupyter Notebook.
 
-SQL is the database we intend to use through Postgress. We will integrate Flask to display the data.
+## Database
+SQL is the database we intend to use to house the database and we will integrate Flask to display the dataset. We will use SQL to display the tables made in Pandas and Python in a concise way that clearly shows the relationships between the columns.
+
+### Tables
+We have created one main table and three smaller tables to display our data. The first main table, named” Final_Project_AHM”, includes the entire cleaned data set. This is the dataset that is used in the MLM, and that is tested. The “Housing” table displays the descriptive features of the houses, such as the year they were built, the number of bathrooms and bedrooms and the square footage of the living area. The “Location” table displays the locater features of these houses such as the latitude and the longitude. Finally, the “Price_Year” table displays the most recent year that house was sold and that price. All these features will be tested and used by the MLM to predict the future housing prices. 
 
 ### Machine Learning
 
