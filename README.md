@@ -66,15 +66,24 @@ In addition to using a Flask template, we will also integrate D3.js for a fully 
 
 ## How to improve Machine Learning Model
 
+#### Create Price Bins
+To get the machine learning model to be more accurate I have created bins for the price. This would mean that the machine learning model is going to be predicting which price range a house will go into. These price ranges are determined by using the describe method and getting the quartiles and using those as the price ranges. The problem that I see with this method at the moment is that the bins are too big and therefore would not be the best to help determine pricing for a person with a certain budget. This could be simplified by creating more bins and rerunning the model. 
+![image](https://user-images.githubusercontent.com/85451089/141715867-bfaec223-0e43-4150-b07f-4d4cb25d977b.png)
+
+#### Create living area square feet bins
+We used the same method as the Price to create bins for the living area square feet. 
+![image](https://user-images.githubusercontent.com/85451089/141716046-788aee85-4262-4d6c-8541-8af2e5bb5a00.png)
+
+
 ### What went wrong
-Due to predicting prices the decision tree model had an extremely low accuracy score, and was not able to complete a confusion matrix
+After creating the bins we got a perfect accuracy score. The only worry we currently have is that the data is over trained.
+![image](https://user-images.githubusercontent.com/85451089/141716281-9bbc6198-2702-4fd4-a9fe-b4550c602fe0.png)
+
 
 ### Next steps to solve the problems
-One option that we believe will help raise the accuracy score is to create price ranges from the 'latest_saleprice' column and have the decision tree model predict in which range the house will fall in as opposed to predicting the price itself.
+We will continue to add other features to make sure that the data is trained correctly. 
 
 Another step we would need to continue to do is to see the impact that each feature has on the accuracy score and determine if there is a feature that isn't needed or if we include more features to help push the accuracy score up
-
-Aside from trying to raise the accuracy score by lowering the prediction possibilities and deleting/adding features, we could also try using other machine learning models to determine which is the best at determining prices.
 
 ## Graphs
 
