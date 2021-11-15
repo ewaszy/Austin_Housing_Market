@@ -19,27 +19,44 @@ This dataset is in CSV format and contains 15,171 home listings that were scrape
 
 For our analysis, we will be focusing attributes the describe the location, price, time of sale, and size: 
 * Id: The Zillow Property ID as a unique identifier 
-* Zipcode:The 5-digit zipcode that the listing in located in
+* Zipcode: The 5-digit zipcode that the listing in located in
+* Address
 * Latitude
 * Longitude
 * Latest Price: The most recent available price at time of data acquisition
+* Latest Sale Month
 * Latest Sale Year
 * Living Area Square Feet
 * Number of Bedrooms
 * Number of Bathrooms
 * Year Built
 * Age of House
+* Price per sq ft
 
 ## Question we hope to answer with our data: What is the median price of a home for each neighborhood in Austin, TX?
-* We hope to predict the median price of a home based on the neighborhood 6 months into the future based on previously defined attributes.
+Using the data we have available, we hope to use our machine learning model to predict the value of a home in real time. This was created for anyone who is interested in putting their house up for sale in Austin, TX and wants to know the current estimated sale price.
 
 ## Description of DataExploration Phase
-
-The dataset we have chosen has over 15 thousand home listings and 45 initial features. While this data is extensive and essential to this project, it needs to be cleaned for duplicate and invalid entries, and scaled down to fit the project better. We will be using the Pandas software to do that, and for us to see the dataset better. As we analyze the data further we will be using Python in Jupyter Notebook.
+The dataset we have chosen contains over 15 thousand home listings with 46 columns of data. We used Pandas in Jupyter notebook to carefully inspect and clean the raw dataset. First, the data types and column names were inspected. Any listing that was not located in “Austin” within the “city” column was removed. Based on column names and data types, 11 columns (variables) were selected (12 including the unique identifier) for analysis. A new dataframe (austin_df) was created. Duplicates for zpid (unique identifier) and address were found and removed. The dataset did not contain any null values. Two additional columns were calculated: Age of home (years) and price per square foot. Data types were checked again; latestPrice, livingAreaSqFt, and price_sqft were transformed into whole integers from decimals. Boxplots of each numeric variable were created to identify and drop necessary outliers. 
 
 ## Description of Analysis Phase
+Descriptve statistics were generated for the following attributes: 
 
+Year 
+* Number of homes sold for each year category
+* Number of homes sold per month by year
+* Average selling price for each year 
+* Average selling price for each month by year
 
+Location
+* Number of homes sold in each zipcode
+* Average price by zip code
+
+Home Attributes
+* Year built / Age of home 
+* Price per square foot 
+* Average price per square foot by zip code
+* Average price per square foot by year
 
 
 # GitHub:
@@ -48,7 +65,7 @@ The dataset we have chosen has over 15 thousand home listings and 45 initial fea
 
 ### Data Cleaning and Analysis
 
-Pandas will be used to clean the data and perform an exploratory analysis. Further analysis will be completed using Python in Jupyter Notebook.
+Data cleaning and analysis will be performed using Pandas in Jupyter Notebook.
 
 ### Database Storage
 
@@ -87,7 +104,7 @@ Another step we would need to continue to do is to see the impact that each feat
 
 ## Graphs
 
-These graphs were created with tableau and with the raw dataframe and will be updated with the final clean data. These graphs help us to determine some of the cleaning that needs to be done. 
+These graphs were created with tableau with the raw dataframe and will be updated with the final clean data. These graphs help us to determine some of the cleaning that needs to be done. 
 
 #### Price vs. Square Feet
 ![latest price vs square feet](https://user-images.githubusercontent.com/85451089/141713227-2d02c88f-6f7e-4203-9e5f-d4bcfe14c14b.png)
