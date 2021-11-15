@@ -76,4 +76,21 @@ Another step we would need to continue to do is to see the impact that each feat
 
 Aside from trying to raise the accuracy score by lowering the prediction possibilities and deleting/adding features, we could also try using other machine learning models to determine which is the best at determining prices.
 
+## Graphs
 
+These graphs were created with tableau and with the raw dataframe and will be updated with the final clean data. These graphs help us to determine some of the cleaning that needs to be done. 
+
+#### Price vs. Square Feet
+![latest price vs square feet](https://user-images.githubusercontent.com/85451089/141713227-2d02c88f-6f7e-4203-9e5f-d4bcfe14c14b.png)
+
+The price vs the square feet scatter plot shows that there is a positive correlation between the living area square footage of the home and the effect it has on the price. There are several outliers and one major one that could be a typo. Getting rid of these outliers could possibly help increase the accuracy of our machine learning model.
+
+#### Year Built and Count
+![Screenshot 2021-11-14 202915](https://user-images.githubusercontent.com/85451089/141713593-a51f9065-b597-449f-b658-47009890c0a1.png)
+
+In this page there are two graphs. The first one describes how many houses were built per year and the bottom graph is the sum of the prices for the homes sold on that year. These two graphs seem to line up pretty well which is a small indication that there isn't a huge price difference in the price per house.
+
+#### Location Vs. Price
+![Screenshot 2021-11-14 201944](https://user-images.githubusercontent.com/85451089/141714098-64ad456b-4166-4f06-a753-a2b99ef3a32f.png)
+
+The location vs price chart shows the places where there are more expensive homes. Because of the large dataset we can see that there are plenty of homes in the area. The larger and darker the bubble the higher price there is. 
