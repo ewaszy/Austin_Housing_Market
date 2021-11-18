@@ -76,7 +76,7 @@ SQL is the database we intend to use to house the database and we will integrate
 
 
 ### Tables
-We have created one main table and three smaller tables to display our data. The first main table, named” Final_Project_AHM”, includes the entire cleaned data set. This is the dataset that is used in the MLM, and that is tested. The “Housing” table displays the descriptive features of the houses, such as the year they were built, the number of bathrooms and bedrooms and the square footage of the living area. The “Location” table displays the locater features of these houses such as the latitude and the longitude. Finally, the “Price_Year” table displays the most recent year that house was sold and that price. All these features will be tested and used by the MLM to predict the future housing prices. 
+We have created one main table and four smaller tables to display our data. The first main table, named “Austin_Housing_Market”, includes the entire cleaned data set. This is the dataset that is used in the MLM, and that is tested. The “Features” table displays the descriptive features of the houses, such as the year they were built, the number of bathrooms and bedrooms and the square footage of the living area. The “Location” table displays the locater features of these houses such as the latitude and the longitude. Finally, the “Saletime” table displays the most recent year and month that a house was sold. Lastly, the "Price" table displays the latest price a house was sold at, along with the corresponding street address. All these features will be tested and used by the MLM to predict the future housing prices. 
 
 
 # Machine Learning
