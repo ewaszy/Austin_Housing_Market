@@ -1,6 +1,7 @@
 # Final_Project
 
 # Presentation: 
+Link to presentation in google docs: https://docs.google.com/presentation/d/1X4kUUQtXJBwRYs9fdDZ3aNhqrs_Ju5XA_OfNkK-1y8Y/edit#slide=id.p
 
 ## Topic: Changes in the Austin Real Estate Market
 
@@ -75,6 +76,7 @@ SQL is the database we intend to use to house the database. We will use SQL to d
 
 
 ### Tables
+
 The first main table, named "Austin_Housing_Market”, includes the entire cleaned data set. This is the dataset that is used in the MLM, and that is tested. 
 ![Screen Shot 2021-11-21 at 10 53 43 PM](https://user-images.githubusercontent.com/86619648/142803407-3534eff6-3c0e-4f27-b92d-5bd93a538097.png)
 
@@ -98,6 +100,7 @@ Finally, the "Saletime" table was also created by joining the "Austin_Housing_Ma
 All these features will be tested and used by the MLM to predict the future housing prices. 
 
 
+
 # Machine Learning
 
 SciKitLearn is the ML library we'll be using to create a classifier. Our training and testing setup is 80% training and 20% testing. The testing and training data will contain 7 features based on location, price, time of sale, and size. The goal is to take the 7 features as the target of the training data to accurately retrieve the target, latestPrice. 
@@ -112,16 +115,31 @@ In addition to using a Flask template, we will also integrate D3.js for a fully 
 
 #### Create Price Bins
 To get the machine learning model to be more accurate I have created bins for the price. This would mean that the machine learning model is going to be predicting which price range a house will go into. These price ranges are determined by using the describe method and getting the quartiles and using those as the price ranges. The problem that I see with this method at the moment is that the bins are too big and therefore would not be the best to help determine pricing for a person with a certain budget. This could be simplified by creating more bins and rerunning the model. 
+
 ![image](https://user-images.githubusercontent.com/85451089/141715867-bfaec223-0e43-4150-b07f-4d4cb25d977b.png)
+
+After reviewing it over again it turned out that I had created the bins backwards. So everything was going into the same bin (3) while leaving the others empty. I corrected the code to now look like the following.
+
+![image](https://user-images.githubusercontent.com/85451089/142111514-049d6497-5764-435c-9ca3-09ec4236353d.png)
+
 
 #### Create living area square feet bins
 We used the same method as the Price to create bins for the living area square feet. 
+
 ![image](https://user-images.githubusercontent.com/85451089/141716046-788aee85-4262-4d6c-8541-8af2e5bb5a00.png)
 
+After review the same mistake was done for the living area square feet so we corrected the order of the bins
+
+![image](https://user-images.githubusercontent.com/85451089/142113146-a8e6700b-23bc-4523-a3ec-8c3578b5caf2.png)
 
 ### What went wrong
 After creating the bins we got a perfect accuracy score. The only worry we currently have is that the data is over trained.
+
 ![image](https://user-images.githubusercontent.com/85451089/141716281-9bbc6198-2702-4fd4-a9fe-b4550c602fe0.png)
+
+Once we fixed the bins the concer of the accuracy score was addressed. Because the price was all going into one bin the accuracy score was always perfect. Once making the adjustment we were able to see the correct accuracy score which at the moment is 0.76
+
+![image](https://user-images.githubusercontent.com/85451089/142114600-490cf558-6194-4df1-9120-41632a5ccca1.png)
 
 
 ### Next steps to solve the problems
