@@ -1,0 +1,49 @@
+Austin_Housing_Market
+-
+zpid INT pk
+streetAddress VARCHAR pk
+zipcode INT pk
+yearBuilt INT 
+latestPrice INT pk
+latest_salemonth INT pk
+latest_saleyear INT pk
+latitude DECIMAL pk
+longitude DECIMAL pk
+livingAreSQFt Int pk
+numofBathrooms DECIMAL 
+numofBedrooms DECIMAL 
+homeAge_years INT 
+price_sqft INT 
+
+Features
+-
+streetAddress VARCHAR pk fk - Austin_Housing_Market.streetAddress
+yearBuilt INT fk - Austin_Housing_Market.yearBuilt 
+homeAge_years INT fk - Austin_Housing_Market.homeAge_years
+livingAreSQFt Int pk fk - Austin_Housing_Market.livingAreSQFt
+numofBathrooms DECIMAL fk - Austin_Housing_Market.numofBathrooms
+numofBedrooms DECIMAL fk - Austin_Housing_Market.numofBedrooms
+
+
+Location
+-
+zpid INT pk fk - Austin_Housing_Market.zpid
+zipcode INT pk fk - Austin_Housing_Market.zipcode
+latitude DECIMAL pk fk - Austin_Housing_Market.latitude
+longitude DECIMAL pk fk - Austin_Housing_Market.longitude
+
+
+Saletime
+-
+zpid INT pk fk - Location.zpid
+latest_salemonth INT pk fk - Austin_Housing_Market.latest_salemonth
+latest_saleyear INT pk fk - Austin_Housing_Market.latest_saleyear
+
+
+
+Price
+-
+zpid INT pk fk - Location.zpid
+streetAddress VARCHAR pk fk - Austin_Housing_Market.streetAddress
+latestPrice INT pk fk - Austin_Housing_Market.latestPrice
+

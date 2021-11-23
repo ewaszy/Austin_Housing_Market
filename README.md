@@ -72,11 +72,33 @@ Data cleaning and analysis will be performed using Pandas in Jupyter Notebook.
 
 
 ## Database
-SQL is the database we intend to use to house the database and we will integrate Flask to display the dataset. We will use SQL to display the tables made in Pandas and Python in a concise way that clearly shows the relationships between the columns.
+SQL is the database we intend to use to house the database. We will use SQL to display the tables made in Pandas and Python in a concise way that clearly shows the relationships between the columns. We have created one main table and four smaller tables to display our data. The data does not have the data from the dataframe, but for refernce purposes we have included photos of the tables. 
 
 
 ### Tables
-We have created one main table and four smaller tables to display our data. The first main table, named “Austin_Housing_Market”, includes the entire cleaned data set. This is the dataset that is used in the MLM, and that is tested. The “Features” table displays the descriptive features of the houses, such as the year they were built, the number of bathrooms and bedrooms and the square footage of the living area. The “Location” table displays the locater features of these houses such as the latitude and the longitude. Finally, the “Saletime” table displays the most recent year and month that a house was sold. Lastly, the "Price" table displays the latest price a house was sold at, along with the corresponding street address. All these features will be tested and used by the MLM to predict the future housing prices. 
+
+The first main table, named "Austin_Housing_Market”, includes the entire cleaned data set. This is the dataset that is used in the MLM, and that is tested. 
+![Screen Shot 2021-11-21 at 10 53 43 PM](https://user-images.githubusercontent.com/86619648/142803407-3534eff6-3c0e-4f27-b92d-5bd93a538097.png)
+
+
+The “Features” table displays the descriptive features of the houses, such as the year they were built, the number of bathrooms and bedrooms and the square footage of the living area. 
+![image](https://user-images.githubusercontent.com/86619648/142803472-aebb1b9c-99cc-47d4-b81e-831f920a5408.png)
+
+
+The “Location” table displays the locater features of these houses such as the latitude and the longitude. 
+![image](https://user-images.githubusercontent.com/86619648/142803510-061fa2b1-87d3-420b-a679-f8be3ca146e2.png)
+
+
+The "Price" table was created by joining the "Austin_Housing_Market” table and the "Location" table. This table displays the most recent price a house was sold at with its' corresponding street address. 
+![image](https://user-images.githubusercontent.com/86619648/142803538-b550ad3c-3afd-41da-bd9b-f0bc43bd19c9.png)
+
+
+Finally, the "Saletime" table was also created by joining the "Austin_Housing_Market” table and the "Location" table. This table displays the most recent month and year that a house was sold. 
+![image](https://user-images.githubusercontent.com/86619648/142803577-b7b06267-f943-457a-95b3-1f738581641f.png)
+
+
+All these features will be tested and used by the MLM to predict the future housing prices. 
+
 
 
 # Machine Learning
