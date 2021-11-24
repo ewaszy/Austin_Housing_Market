@@ -152,6 +152,8 @@ Another step we would need to continue to do is to see the impact that each feat
 We used Tableau to create interactive visuals of our cleaned data.
 
 The link to the Dashboard can be found here: 
+https://public.tableau.com/views/CountofListingsperZipcode/AustinHousingMarket?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link
+
 
 The graphs below were created with the raw dataframe. These graphs helped determine some of the cleaning that needed to be done. 
 
