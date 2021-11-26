@@ -111,41 +111,20 @@ In addition to using a Flask template, we will also integrate D3.js for a fully 
 
 
 
-## How to improve Machine Learning Model
+## Machine Learning Models
 
-#### Create Price Bins
-To get the machine learning model to be more accurate I have created bins for the price. This would mean that the machine learning model is going to be predicting which price range a house will go into. These price ranges are determined by using the describe method and getting the quartiles and using those as the price ranges. The problem that I see with this method at the moment is that the bins are too big and therefore would not be the best to help determine pricing for a person with a certain budget. This could be simplified by creating more bins and rerunning the model. 
+#### Decision Trees
+In order to get a high accuracy score with a decision tree model we needed to create multiple bins for which the prices would fall into. To do this we took att the house prices under $1,000,000 and put them into ten different bins. Each bin was $100,000. From there we went ahead and and ran the decision tree model and received an extremely high accuracy score over 92%. After careful consideration we realized that this does not answer the question of how much is your home worth in Austin, and therefore tried other models. 
 
-![image](https://user-images.githubusercontent.com/85451089/141715867-bfaec223-0e43-4150-b07f-4d4cb25d977b.png)
+#### Linear Regression 
+Next we tried linear regression as it would respond with an actual number per house price as opposed to just putting each house into a bin. This however provided us with a low accuracy score under 30% and therefore we decided to try one more option.
 
-After reviewing it over again it turned out that I had created the bins backwards. So everything was going into the same bin (3) while leaving the others empty. I corrected the code to now look like the following.
+#### Multiple Linear Regression
+The next method we tried was multiple linear regression in which we received 86% accuracy score. This was really high compared to the linear regression. With multiple linear regression we were able to take all the features into consideration and therefore get a much higher score than with the linear regression. We decided that this would be the model that we will use for the analysis.
 
-![image](https://user-images.githubusercontent.com/85451089/142111514-049d6497-5764-435c-9ca3-09ec4236353d.png)
+### Next steps 
+In order to make our model more accurate and improve it we would take a look at the effect each feature has on the price of the home and determine if it would help to possibly get rid of some features. Another step I would like to take in the future is to use Flask and put this model into a web format.
 
-
-#### Create living area square feet bins
-We used the same method as the Price to create bins for the living area square feet. 
-
-![image](https://user-images.githubusercontent.com/85451089/141716046-788aee85-4262-4d6c-8541-8af2e5bb5a00.png)
-
-After review the same mistake was done for the living area square feet so we corrected the order of the bins
-
-![image](https://user-images.githubusercontent.com/85451089/142113146-a8e6700b-23bc-4523-a3ec-8c3578b5caf2.png)
-
-### What went wrong
-After creating the bins we got a perfect accuracy score. The only worry we currently have is that the data is over trained.
-
-![image](https://user-images.githubusercontent.com/85451089/141716281-9bbc6198-2702-4fd4-a9fe-b4550c602fe0.png)
-
-Once we fixed the bins the concer of the accuracy score was addressed. Because the price was all going into one bin the accuracy score was always perfect. Once making the adjustment we were able to see the correct accuracy score which at the moment is 0.76
-
-![image](https://user-images.githubusercontent.com/85451089/142114600-490cf558-6194-4df1-9120-41632a5ccca1.png)
-
-
-### Next steps to solve the problems
-We will continue to add other features to make sure that the data is trained correctly. 
-
-Another step we would need to continue to do is to see the impact that each feature has on the accuracy score and determine if there is a feature that isn't needed or if we include more features to help push the accuracy score up
 
 ## Graphs
 
